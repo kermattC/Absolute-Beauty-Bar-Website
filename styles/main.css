@@ -37,7 +37,7 @@ body, html {
 
 .parallax {
 
-    background: linear-gradient(to left, transparent, black), url("mainbackground.jpg");
+    background: linear-gradient(to left, transparent, black), url("../images/mainbackground.jpg");
     border: 0;
     /* Full height */
     height: 100%; 
