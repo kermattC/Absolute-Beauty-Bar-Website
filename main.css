@@ -1,6 +1,7 @@
 body {
-  font-family: sans-serif;
+  font-family: Raleway;
   background-color: black;
+  font-weight: lighter;
 
 }
 .topnav {
@@ -16,7 +17,6 @@ body {
   text-decoration: none;
   background-color: transparent;
   color: white;
-  font-family: sans-serif;
   font-weight: lighter;
 }
 
@@ -78,4 +78,15 @@ body, html {
   content: "";
   display: table;
   clear: both;
+}
+
+.button {
+  background-color:  #FFC4B2;
+  width: 12.5%;  
+  text-align: left;
+  border-radius: 7px;
+  padding: 20px;
+  color: black;
+  font-size: 60%;
+  font-weight: 900;
 }
