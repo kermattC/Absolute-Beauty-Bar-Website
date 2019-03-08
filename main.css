@@ -16,7 +16,6 @@ body {
   text-decoration: none;
   background-color: transparent;
   color: white;
-  font-family: sans-serif;
   font-weight: lighter;
 }
 
@@ -51,7 +50,7 @@ body, html {
   }
 
  .box{
-  height:750px;background-color:white;font-size:36px
+  height:750px;background-color:#FFC4B2;font-size:36px
  }
  
 .caption {
