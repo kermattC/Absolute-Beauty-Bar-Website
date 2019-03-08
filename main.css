@@ -22,6 +22,7 @@ body {
 .topnav-right {
   font-size: 20px;
   float: right;
+  padding-right: 5px;
 }
 
 .topnav-left{
@@ -29,9 +30,28 @@ body {
   padding-left: 10px;
 }
 
-body{
-  background: linear-gradient(to left, transparent, black), url("mainbackground.jpg");
+body, html {
+  height: 100%;
 }
+
+.parallax {
+
+    background: linear-gradient(to left, transparent, black), url("mainbackground.jpg");
+
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    back
+  }
+ .box{
+  height:750px;background-color:white;font-size:36px
+ }
+ 
 .caption {
   text-align: left;
   padding-top: 26%;
@@ -39,4 +59,5 @@ body{
   padding-left: 24px;
   font-weight: 300;
   font-size: 44px;
+  background-color: transparent;
 }
