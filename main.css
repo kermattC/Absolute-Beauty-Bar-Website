@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  background-color: black;
 
 }
 .topnav {
@@ -37,7 +38,7 @@ body, html {
 .parallax {
 
     background: linear-gradient(to left, transparent, black), url("mainbackground.jpg");
-
+    border: 0;
     /* Full height */
     height: 100%; 
   
@@ -46,8 +47,9 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    back
+    overflow: hidden;
   }
+
  .box{
   height:750px;background-color:white;font-size:36px
  }
