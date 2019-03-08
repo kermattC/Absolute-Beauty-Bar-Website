@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+
+}
+.topnav {
+  position: fixed;
+  top: 3;
+  width: 100%;
+}
+
+.topnav a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: transparent;
+  color: white;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+.topnav-right {
+  font-size: 20px;
+  float: right;
+}
+
+.topnav-left{
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+body{
+  background: linear-gradient(to left, transparent, black), url("mainbackground.jpg");
+}
+.caption {
+  text-align: left;
+  padding-top: 26%;
+  color: white;
+  padding-left: 24px;
+  font-weight: 300;
+  font-size: 44px;
+}
