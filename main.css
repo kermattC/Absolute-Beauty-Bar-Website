@@ -61,3 +61,17 @@ body, html {
   font-size: 44px;
   background-color: transparent;
 }
+
+.column {
+  float: left;
+  width: 33.33%;
+  height: 300px; 
+  font-weight: lighter;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
