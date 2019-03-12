@@ -110,6 +110,16 @@ body, html {
   padding-left: 5%;
   padding-right: 5%;
 }
+.columnAboutMe {
+  float: left;
+  width: 90%;
+  height: 300px; 
+  font-weight: lighter;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+  overflow: hidden;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -127,4 +137,13 @@ body, html {
   color: black;
   font-size: 60%;
   font-weight: 900;
+}
+
+.igTitle a{
+  text-decoration: none;
+  color: black;
+}
+
+.igTitle a:hover {
+  color: white;
 }
