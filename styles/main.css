@@ -66,6 +66,21 @@ body, html {
   overflow: hidden;
 }
 
+.parallaxv3 {
+
+  background: linear-gradient(to left, transparent, black), url("../images/3rdbackground.jpg");
+  border: 0;
+  /* Full height */
+  height: 100%; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
  .box{
   height:750px;background-color:#FFC4B2;font-size:36px
  }
