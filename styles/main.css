@@ -92,6 +92,12 @@ body, html {
   height:750px;background-color:#FFC4B2;font-size:36px
  }
  
+ .boxBooking{
+  height:750px;
+  background-color:white;
+  font-size:36px;
+  overflow: hidden;
+ }
 .caption {
   text-align: left;
   padding-top: 26%;
@@ -146,4 +152,25 @@ body, html {
 
 .igTitle a:hover {
   color: white;
+}
+
+.BOOKME {
+  width: 90%;
+  height: 300px; 
+  font-weight: lighter;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+  /* overflow: hidden; */
+}
+
+.tableBook {
+  width:70%; 
+  margin-left:15%; 
+  margin-right:15%;
+  overflow: auto;
+}
+
+.tableBook td {
+  padding-top: 10%;
 }
