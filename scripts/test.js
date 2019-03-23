@@ -19,8 +19,9 @@ function myFunction(){
   $(".OPEN").hide();
 
   $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
-  $("#form").append("<form><br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>");
-  $("#form").append("<form><br/>" + "DATE: " +"<input type='date' name='date'>");
+  $("#form").append("<br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>" + "<br/>");
+  $("#form").append("<br/>" + "DATE: " +"<input type='date' name='date'>");
+  $("#form").append("<br/> "+ "<input type='submit' value='Confirm Booking'>" + "</form>");
 
 }
 
@@ -33,8 +34,9 @@ function myFunction2(){
   $(".OPEN").hide();
 
   $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
-  $("#form").append("<form><br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>");
-  $("#form").append("<form><br/>" + "DATE: " +"<input type='date' name='date'>");
+  $("#form").append("<br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>" + "<br/>");
+  $("#form").append("<br/>" + "DATE: " +"<input type='date' name='date'>");
+  $("#form").append("<br/> "+ "<input type='submit' value='Confirm Booking'>" + "</form>");
 }
 
 function myFunction3(){
@@ -45,8 +47,9 @@ function myFunction3(){
   $(".OPEN").hide();
 
   $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
-  $("#form").append("<form><br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>");
-  $("#form").append("<form><br/>" + "DATE: " +"<input type='date' name='date'>");
+  $("#form").append("<br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>" + "<br/>");
+  $("#form").append("<br/>" + "DATE: " +"<input type='date' name='date'>");
+  $("#form").append("<br/> "+ "<input type='submit' value='Confirm Booking'>" + "</form>");
 }
 
 function myFunction4(){
@@ -57,8 +60,9 @@ function myFunction4(){
   $(".DOLL").hide();
 
   $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
-  $("#form").append("<form><br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>");
-  $("#form").append("<form><br/>" + "DATE: " +"<input type='date' name='date'>");
+  $("#form").append("<br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>" + "<br/>");
+  $("#form").append("<br/>" + "DATE: " +"<input type='date' name='date'>");
+  $("#form").append("<br/> "+ "<input type='submit' value='Confirm Booking'>" + "</form>");
 }
 
 
