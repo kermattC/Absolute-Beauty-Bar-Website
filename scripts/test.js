@@ -12,27 +12,50 @@
 // });
 
 function myFunction(){
-  $(".DOLL").toggle();
-  $(".NATURAL").toggle();
-  $(".OPEN").toggle();
+  $('.CAT').click(false);
+
+  $(".DOLL").hide();
+  $(".NATURAL").hide();
+  $(".OPEN").hide();
+
+  $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
+  $("#form").append("<form><br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>");
+  $("#form").append("<form><br/>" + "DATE: " +"<input type='date' name='date'>");
+
 }
 
+
 function myFunction2(){
-  $(".CAT").toggle();
-  $(".NATURAL").toggle();
-  $(".OPEN").toggle();
+  $('.DOLL').click(false);
+
+  $(".CAT").hide();
+  $(".NATURAL").hide();
+  $(".OPEN").hide();
+
+  $("#form").append("<form><br/>" + "First Name: " +"<input type='text' name='FirstName'>");
+  $("#form").append("<form><br/>" + "Last Name: " +"<input type='text' name='lasttName'>");
 }
 
 function myFunction3(){
-  $(".CAT").toggle();
-  $(".DOLL").toggle();
-  $(".OPEN").toggle();
+  $('.NATURAL').click(false);
+
+  $(".CAT").hide();
+  $(".DOLL").hide();
+  $(".OPEN").hide();
+
+  $("#form").append("<form><br/>" + "First Name: " +"<input type='text' name='FirstName'>");
+  $("#form").append("<form><br/>" + "Last Name: " +"<input type='text' name='lasttName'>");
 }
 
 function myFunction4(){
-  $(".CAT").toggle();
-  $(".NATURAL").toggle();
-  $(".DOLL").toggle();
+  $('.OPEN').click(false);
+
+  $(".CAT").hide();
+  $(".NATURAL").hide();
+  $(".DOLL").hide();
+
+  $("#form").append("<form><br/>" + "First Name: " +"<input type='text' name='FirstName'>");
+  $("#form").append("<form><br/>" + "Last Name: " +"<input type='text' name='lasttName'>");
 }
 
 

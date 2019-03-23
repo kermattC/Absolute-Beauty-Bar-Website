@@ -35,6 +35,3 @@ $(document).ready(function(){
     //     $("#OPEN").on('click', function(){
     //   alert("Open is chosen");
     // });
-  });
-});
-
