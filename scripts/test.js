@@ -32,8 +32,9 @@ function myFunction2(){
   $(".NATURAL").hide();
   $(".OPEN").hide();
 
-  $("#form").append("<form><br/>" + "First Name: " +"<input type='text' name='FirstName'>");
-  $("#form").append("<form><br/>" + "Last Name: " +"<input type='text' name='lasttName'>");
+  $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
+  $("#form").append("<form><br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>");
+  $("#form").append("<form><br/>" + "DATE: " +"<input type='date' name='date'>");
 }
 
 function myFunction3(){
@@ -43,8 +44,9 @@ function myFunction3(){
   $(".DOLL").hide();
   $(".OPEN").hide();
 
-  $("#form").append("<form><br/>" + "First Name: " +"<input type='text' name='FirstName'>");
-  $("#form").append("<form><br/>" + "Last Name: " +"<input type='text' name='lasttName'>");
+  $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
+  $("#form").append("<form><br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>");
+  $("#form").append("<form><br/>" + "DATE: " +"<input type='date' name='date'>");
 }
 
 function myFunction4(){
@@ -54,8 +56,9 @@ function myFunction4(){
   $(".NATURAL").hide();
   $(".DOLL").hide();
 
-  $("#form").append("<form><br/>" + "First Name: " +"<input type='text' name='FirstName'>");
-  $("#form").append("<form><br/>" + "Last Name: " +"<input type='text' name='lasttName'>");
+  $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
+  $("#form").append("<form><br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>");
+  $("#form").append("<form><br/>" + "DATE: " +"<input type='date' name='date'>");
 }
 
 
