@@ -11,7 +11,7 @@
   // $("#TABLE").addClass("tableBook")
 // });
 
-function myFunction(){
+function catFunction(){
   $('.CAT').click(false);
 
   $(".DOLL").hide();
@@ -21,12 +21,12 @@ function myFunction(){
   $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
   $("#form").append("<br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>" + "<br/>");
   $("#form").append("<br/>" + "DATE: " +"<input type='date' name='date'>");
-  $("#form").append("<br/> "+ "<input type='submit' value='Confirm Booking'>" + "</form>");
+  $("#form").append("<br/> "+ "<input type='submit' id='SUBMIT' value='Confirm Booking'>" + "</form>");
 
 }
 
 
-function myFunction2(){
+function dollFunction(){
   $('.DOLL').click(false);
 
   $(".CAT").hide();
@@ -36,10 +36,10 @@ function myFunction2(){
   $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
   $("#form").append("<br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>" + "<br/>");
   $("#form").append("<br/>" + "DATE: " +"<input type='date' name='date'>");
-  $("#form").append("<br/> "+ "<input type='submit' value='Confirm Booking'>" + "</form>");
+  $("#form").append("<br/> "+ "<input type='submit' id='SUBMIT' value='Confirm Booking'>" + "</form>");
 }
 
-function myFunction3(){
+function naturalFunction(){
   $('.NATURAL').click(false);
 
   $(".CAT").hide();
@@ -49,10 +49,10 @@ function myFunction3(){
   $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
   $("#form").append("<br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>" + "<br/>");
   $("#form").append("<br/>" + "DATE: " +"<input type='date' name='date'>");
-  $("#form").append("<br/> "+ "<input type='submit' value='Confirm Booking'>" + "</form>");
+  $("#form").append("<br/> "+ "<input type='submit' id='SUBMIT' value='Confirm Booking'>" + "</form>");
 }
 
-function myFunction4(){
+function openFunction(){
   $('.OPEN').click(false);
 
   $(".CAT").hide();
@@ -62,7 +62,7 @@ function myFunction4(){
   $("#form").append("<form><br/>" + "FIRST NAME: " +"<input type='text' name='FirstName'>");
   $("#form").append("<br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>" + "<br/>");
   $("#form").append("<br/>" + "DATE: " +"<input type='date' name='date'>");
-  $("#form").append("<br/> "+ "<input type='submit' value='Confirm Booking'>" + "</form>");
+  $("#form").append("<br/> "+ "<input type='submit' id='SUBMIT' value='Confirm Booking'>" + "</form>");
 }
 
 
