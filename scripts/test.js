@@ -9,8 +9,6 @@
   // $(".BOOKME").append("</table>")
   // $(".BOOKME").addClass("BOOKME2");
   // $("#TABLE").addClass("tableBook")
-  // $(".DOLL").toggle();
-  // $(".DOLL").toggle();
 // });
 
 function myFunction(){
@@ -36,4 +34,6 @@ function myFunction4(){
   $(".NATURAL").toggle();
   $(".DOLL").toggle();
 }
+
+
 
