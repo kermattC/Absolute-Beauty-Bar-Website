@@ -91,7 +91,9 @@ body, html {
 }
 
  .box{
-  height:750px;background-color:#FFC4B2;font-size:36px
+  height:750px;
+  background-color:#FFC4B2;
+  font-size:36px
  }
  
  .boxBooking{
@@ -180,6 +182,7 @@ body, html {
   border: 10px;
   border-color: black; 
   border-style: solid;
+  border-width: thin;
 }
 .tableBook {
   width:90%; 
