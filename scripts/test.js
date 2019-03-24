@@ -32,12 +32,11 @@ $(document).ready(function () {
 */
 
 $('img').click(function(event){
-
-
   if ($(document).find($('#newForm'))){
     $('#newForm').remove();;
     console.log("removing form");
   }
+    
     let newForm = $(document.createElement("div"));
     newForm.attr('id', 'newForm');
     newForm.addClass('boxBooking');
