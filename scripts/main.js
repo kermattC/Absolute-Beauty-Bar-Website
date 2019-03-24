@@ -21,15 +21,3 @@ $(document).ready(function(){
       });
     } // End if
   });
-    // $("#CAT").on('click'{
-    //   alert("Cat is chosen");
-    // });
-    //     $("#DOLL").on('click', function(){
-    //   alert("Doll is chosen");
-    // });
-    //     $("#NATURAL").on('click', function(){
-    //   alert("Natural is chosen");WS
-    // });
-    //     $("#OPEN").on('click', function(){
-    //   alert("Open is chosen");
-    // });
