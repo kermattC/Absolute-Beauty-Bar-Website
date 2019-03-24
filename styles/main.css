@@ -176,8 +176,8 @@ body, html {
 
 .selected{
   border: 10px;
-  padding: 5px;
   border-color: black; 
+  border-style: solid;
 }
 .tableBook {
   width:90%; 
