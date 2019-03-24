@@ -10,9 +10,9 @@ $(document).ready(function () {
   $("#TABLE").addClass("tableBook")
 
 $('img').click(function(event){
+  deselectAll();
   if ($(document).find($('#newForm'))){
     $('#newForm').remove();;
-    console.log("removing form");
   }
     var element = document.getElementById(event.target.id);
     element.classList.toggle("selected");
@@ -20,7 +20,7 @@ $('img').click(function(event){
     let newForm = $(document.createElement("div"));
     newForm.attr('id', 'newForm');
     newForm.addClass('boxBooking');
-    newForm.append($("<p> You have selected style: " + event.target.id + "</p>"));
+    newForm.append($("<p> Style: " + event.target.id + "</p>"));
 
     newForm.append($("<form>" + "FIRST NAME: " +"<input type='text' name='FirstName'>"));
     newForm.append($("<br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>" + "<br/>"));
@@ -28,7 +28,15 @@ $('img').click(function(event){
     newForm.append($("<br/>"+ "<input type='submit' id='SUBMIT' value='Confirm Booking'>" + "</form>"));
   
     newForm.insertAfter($('#booking'));
-});
+  });
+
+  function deselectAll(){
+    let selected = document.getElementsByTagName('img');
+    for (let i = 0; i < selected.length; i++){
+      selected[i].className = "";
+    }
+   // console.log(selected);
+  }
 });
 
 
