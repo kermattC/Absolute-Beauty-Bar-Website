@@ -24,7 +24,7 @@ $('img').click(function(event){
 
     newForm.append($("<form>" + "FIRST NAME: " +"<input type='text' name='FirstName'>"));
     newForm.append($("<br/>" + "LAST NAME: " +"<input type='text' name='lasttName'>" + "<br/>"));
-    newForm.append($("<br/>" + "DATE: " +"<input type='date' name='date'>"));
+    newForm.append($("<br/>" + "DATE: " +"<input type='date' name='date'>" + "&emsp;"+ "TIME: " + "<input type='time' name='usr_time'>"));
     newForm.append($("<br/>"+ "<input type='submit' id='SUBMIT' value='Confirm Booking'>" + "</form>"));
   
     newForm.insertAfter($('#booking'));
