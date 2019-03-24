@@ -99,6 +99,7 @@ body, html {
   background-color:#ffc4b2;
   font-size:36px;
   overflow: hidden;
+  text-align: center;
  }
 
  .newForm{
@@ -106,6 +107,7 @@ body, html {
   background-color:#ffc4b2;
   font-size:36px;
   overflow: hidden;
+  text-align: center;
  }
 .caption {
   text-align: left;
