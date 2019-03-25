@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon ./start.js"
+    "start": "nodemon ./index.js"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +15,11 @@
   "devDependencies": {
     "nodemon": "^1.18.10",
     "ws": "3.3.2"
+  },
+  
+  "extensions": {
+    ".html" : "text/html",
+    ".css" : "text/css",
+    ".js" : "application/javascript"  
   }
 }
