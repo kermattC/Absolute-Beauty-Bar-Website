@@ -3,7 +3,6 @@ const router = express.Router();
 var path = require('path')
 var app = express();
 
-
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, response) => {
