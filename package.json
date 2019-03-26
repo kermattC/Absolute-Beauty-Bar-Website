@@ -10,16 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.2.2"
   },
   "devDependencies": {
     "nodemon": "^1.18.10",
     "ws": "3.3.2"
   },
-  
   "extensions": {
-    ".html" : "text/html",
-    ".css" : "text/css",
-    ".js" : "application/javascript"  
+    ".html": "text/html",
+    ".css": "text/css",
+    ".js": "application/javascript"
   }
 }
