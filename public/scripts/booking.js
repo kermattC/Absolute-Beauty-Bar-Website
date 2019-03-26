@@ -47,6 +47,10 @@ function submitForm(){
   let firstName = document.getElementById('firstNameField').value;
   let lastName = document.getElementById('lastNameField').value;
   let date = document.getElementById('date').value;
+
+  console.log("First name: " + firstName);
+  console.log("Last Name: " + lastName);
+  console.log("Date: " + date);
 }
 
 function displayData(){
