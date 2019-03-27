@@ -119,6 +119,7 @@ body, html {
    float: right;
    padding-right: 25%;
    font-size: 175%;
+   margin: 0;
  }
 
  .days{
