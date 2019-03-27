@@ -218,3 +218,31 @@ body, html {
 .tableBook td {
   padding-top: 3%;
 }
+
+#container {
+  color: black;
+  text-align: center;
+  position: relative;
+  top: 40%;
+  border-style: solid;
+  border-color: #FFC4B2;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: #FFC4B2;
+  font-size: 120%;
+  border-radius: 10px;
+}
+
+#container form {
+  padding: 5%;
+}
+
+#username {
+  font-size: 120%;
+}
+
+#password {
+  font-size: 120%;
+
+}
