@@ -58,7 +58,6 @@ function submitForm() {
   let style = $(document).find("img.selected").attr("id");
   let booked = false
   let currentDate = ""
-
   console.log("First name: " + firstName);
   console.log("Last Name: " + lastName);
   console.log("Date: " + date);
@@ -109,14 +108,14 @@ function submitForm() {
         dataType: 'json',
         type: "POST"
       });
-      let notice = $("<p id='notice'>Your appointment has been booked! See you soon!</p>");
+      let notice = $("<p id='notice'>YOUR APPOINTMENT HAS BEEN BOOKED! SEE YOU SOON!</p>");
       notice.addClass('notice');
       if ($(document).find($('#booking'))) {
         notice.insertAfter($('#booking'))
       }
     }else{
       console.log("booking unsuccessful");
-      let notice = $("<p id='notice'>Sorry, the day you selected is already booked. Please choose another day </p>");
+      let notice = $("<p id='notice'>SORRY, THIS DAY HAS BEEN BOOKED. PLEASE CHOOSE ANOTHER DAY</p>");
       notice.addClass('notice');
       if ($(document).find($('#booking'))) {
         notice.insertAfter($('#booking'));
@@ -137,7 +136,7 @@ function displayData() {
       data = JSON.parse(data);
      // console.log("data loaded");
 
-      var months = ["January", "February", "March", "April", "June", "July", "August", "September", "October", "November", "December"];
+      var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
       var monthId = 2;
       var currentMonth = months[monthId];
       let calendar = $(document.createElement("table"));
@@ -148,7 +147,7 @@ function displayData() {
       calendar.append($("<button id='prevButton'" + "Previous" + "</button>"));
       calendar.append($("<button id='nextButton'" + "Next" + "</button>"));
 
-      calendar.append($("<tr> <th class='days'>Sunday</th> <th class='days'>Monday</th> <th class='days'>Tuesday</th> <th class='days'>Wednesday</th> <th class='days'>Thursday</th> <th class='days'>Friday</th> <th class='days'>Saturday</th></tr>"));
+      calendar.append($("<tr> <th class='days'>SUN</th> <th class='days'>MON</th> <th class='days'>TUE</th> <th class='days'>WED</th> <th class='days'>THU</th> <th class='days'>FRI</th> <th class='days'>SAT</th></tr>"));
       calendar.append($("<tr> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td></tr>"));
       calendar.append($("<tr> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td> <td>13</td> <td>14</td></tr>"));
       calendar.append($("<tr> <td>15</td> <td>16</td> <td>17</td> <td>18</td> <td>19</td> <td>20</td> <td>21</td></tr>"));

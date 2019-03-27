@@ -118,6 +118,7 @@ body, html {
    background-color: #ffc4b2;
    float: right;
    padding-right: 25%;
+   font-size: 175%;
  }
 
  .days{
@@ -126,7 +127,10 @@ body, html {
  
  .notice{
    background-color: #ffc4b2;
-   padding-left: 10%;
+   padding: 5%;
+   margin: 0;
+   font-size: 200%;
+   text-align: center;
  }
  .newForm{
   height:750px;
