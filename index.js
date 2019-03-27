@@ -13,6 +13,10 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
 
+app.get('/login', function(request, response){
+  response.sendFile('login.html', {root: __dirname + '/public'});
+});
+
 app.get('/', (req, response) => {
   response.sendFile('main.html', { root: __dirname + '/public' });
 });
