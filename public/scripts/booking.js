@@ -33,7 +33,7 @@ $(document).ready(function () {
     newForm.append($("<form>" + "FIRST NAME: " + "<input type='text' id='firstNameField' name='FirstName'>"));
     newForm.append($("<br/>" + "LAST NAME: " + "<input type='text' id='lastNameField' name='lasttName'>" + "<br/>"));
     newForm.append($("<br/>" + "DATE: " + "<input id='date' type='date' name='date'>"));
-    newForm.append($("<button type='submit'  onclick='submitForm()' >" + "Submit" + "</button>"));
+    newForm.append($("<br/>" + "<button type='submit'  onclick='submitForm()' >" + "Submit" + "</button>"));
     newForm.insertAfter($('#booking'));
 
     newForm[0].scrollIntoView();
