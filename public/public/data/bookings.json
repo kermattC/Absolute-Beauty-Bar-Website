@@ -1,0 +1,2 @@
+{"_id":{"$oid":"5c9a78a13bb9328298238e08"},"firstName":"Jane","lastName":"Doe","Date":"2019-05-05"}
+{"_id":{"$oid":"5c9a78f43bb9328298238e09"},"firstName":"asdf","lastName":"qwer","Date":"2019-04-06"}

@@ -1,0 +1,8 @@
+{"_id":{"$oid":"5c9ac911bb659217826cf6ec"},"firstName":"Jane","lastName":"Doe","Date":"2019-03-26","Style":"Cat"}
+{"_id":{"$oid":"5c9ac918bb659217826cf6ed"},"firstName":"Matt","lastName":"Chan","Date":"2019-03-27","Style":"Cat"}
+{"_id":{"$oid":"5c9ac91ebb659217826cf6ee"},"firstName":"Dom","lastName":"Cabitac","Date":"2019-03-29","Style":"Cat"}
+{"_id":{"$oid":"5c9ac928bb659217826cf6ef"},"firstName":"Gnome","lastName":"Sucks","Date":"2019-04-02","Style":"Natural"}
+{"_id":{"$oid":"5c9ac94b0dbfd417c449aec6"},"firstName":"Gnome","lastName":"Sucks","Date":"2019-03-30","Style":"Open"}
+{"_id":{"$oid":"5c9ac9520dbfd417c449aec7"},"firstName":"Test","lastName":"asdf","Date":"2019-03-28","Style":"Open"}
+{"_id":{"$oid":"5c9ac9640dbfd417c449aec8"},"firstName":"Natural","lastName":"Appointment","Date":"2019-04-05","Style":"Natural"}
+{"_id":{"$oid":"5c9ac9770dbfd417c449aec9"},"firstName":"Ayy","lastName":"Lmao","Date":"2019-04-24","Style":"Doll"}

@@ -101,9 +101,24 @@ body, html {
   background-color:#ffc4b2;
   font-size:36px;
   overflow: hidden;
-  text-align: center;
+  text-align: left;
+  padding-left: 10%;
  }
 
+ .calendar{
+   background-color: #ffc4b2;
+   float: right;
+   padding-right: 25%;
+ }
+
+ .days{
+   padding-right: 10%;
+ }
+ 
+ .notice{
+   background-color: #ffc4b2;
+   padding-left: 10%;
+ }
  .newForm{
   height:750px;
   background-color:#ffc4b2;
@@ -172,7 +187,6 @@ body, html {
   width: 90%;
   height: 100px; 
   font-weight: lighter;
-  padding-left: 5%;
   padding-right: 5%;
   text-align: center;
   /* overflow: hidden; */
