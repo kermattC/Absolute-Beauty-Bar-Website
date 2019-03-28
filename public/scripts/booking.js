@@ -32,10 +32,11 @@ $(document).ready(function () {
 
     newForm.append($("<form>" + "FIRST NAME: " + "<input type='text' id='firstNameField' name='FirstName'>"));
     newForm.append($("<br/>" + "LAST NAME: " + "<input type='text' id='lastNameField' name='lasttName'>" + "<br/>"));
-    newForm.append($("<br/>" + "DATE: " + "<input id='date' type='date' name='date'>"));
+    newForm.append($("<br/>" + "DATE: " + "<input id='dateSelect' type='date' name='date'>"));
     newForm.append($("<br/>" + "<button type='submit'  onclick='submitForm()' >" + "Submit" + "</button>"));
     newForm.insertAfter($('#booking'));
 
+    ;
     newForm[0].scrollIntoView();
   });
 
@@ -45,15 +46,20 @@ $(document).ready(function () {
       selected[i].className = "";
     }
   }
+
 });
 
 function submitForm() {
+  displayData();
+  if ($(document).find('#bookedData')){
+    $('#bookedData').remove();
+  }
   if ($(document).find($('#notice'))){
     $('#notice').remove();
   }
   let firstName = document.getElementById('firstNameField').value;
   let lastName = document.getElementById('lastNameField').value;
-  let date = document.getElementById('date').value;
+  let date = document.getElementById('dateSelect').value;
   console.log("Form date: " + date);
   let style = $(document).find("img.selected").attr("id");
   let booked = false
@@ -126,6 +132,9 @@ function submitForm() {
 }
 function displayData() {
   
+  // if ($(document.getElementById('dateSelect'))== null){
+  //   console.log('no date');
+  // }
   $.ajax({
     type: 'GET',
     dataType: "text",
@@ -134,15 +143,30 @@ function displayData() {
       data = JSON.parse(data);
       console.log("data loaded");
 
-      let bookedData = $("<p id='bookedData'>Schedule for the next 7 days</p>");
-      bookedData.addClass('bookedData');
+      let test = $(document.getElementById('dateSelect'));
+      if (test){
+        if (test.val() != null){
+          console.log('has date');
+          let bookedData = $("<p id='bookedData'>Schedule for the next 7 days</p>");
+          bookedData.addClass('bookedData');
+          bookedData.append("<p>"+test.val()+": booked</p>");
+          if ($(document).find($('#booking'))){
+            bookedData.insertAfter($('#booking'));
+          }
 
-      // for (let i = 0; i < 7; i++){
-        
-      // }
-      if ($(document).find($('#booking'))){1
-        bookedData.insertAfter($('#booking'));
+        }else{
+          console.log('no date');
+        }
       }
+
+      for (let i = 0; i < 7; i++){
+        console.log('ayy lmao');
+        // bookedData.append($("<p>"))
+        // newForm.append($("<form>" + "FIRST NAME: " + "<input type='text' id='firstNameField' name='FirstName'>"));
+      }
+
+
+      
     }
   });
   
