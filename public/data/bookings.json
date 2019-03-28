@@ -4,3 +4,5 @@
 {"_id":{"$oid":"5c9d4bff0e55b651d0bf6675"},"firstName":"Dom","lastName":"Cabitac","Date":"2019-03-30","Style":"Doll"}
 {"_id":{"$oid":"5c9d4c120e55b651d0bf6676"},"firstName":"Gnome","lastName":"Sucks","Date":"2019-04-01","Style":"Natural"}
 {"_id":{"$oid":"5c9d4c5c2885a9528134f3a0"},"firstName":"Some","lastName":"User","Date":"2019-04-03","Style":"Doll"}
+{"_id":{"$oid":"5c9d4c7c94bd3552d5dd9247"},"firstName":"Shouldbe","lastName":"Booked","Date":"2019-04-02","Style":"Natural"}
+{"_id":{"$oid":"5c9d4ca194bd3552d5dd9248"},"firstName":"Hmm","lastName":"Thonk","Date":"2019-03-31","Style":"Cat"}
