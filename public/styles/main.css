@@ -110,7 +110,7 @@ body, html {
   background-color:#ffc4b2;
   font-size:36px;
   overflow: hidden;
-  text-align: center;
+  text-align: left;
   padding-left: 10%;
  }
 
@@ -134,12 +134,21 @@ body, html {
    text-align: center;
  }
  .newForm{
-  height:750px;
+  height:500px;
   background-color:#ffc4b2;
   font-size:36px;
   overflow: hidden;
-  text-align: center;
+  text-align: right;
+  padding-left: 10%;
  }
+
+.bookedDatas{
+  background-color: #ffc4b2;
+  margin: 0;
+  padding:0;
+  overflow:hidden;
+  text-align:right
+}
 .caption {
   text-align: left;
   padding-top: 26%;

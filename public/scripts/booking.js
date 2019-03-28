@@ -126,35 +126,27 @@ function submitForm() {
 }
 function displayData() {
   
-  // $.ajax({
-  //   type: 'GET',
-  //   dataType: "text",
-  //   url: '/database_read',
-  //   success: function (data) {
-  //     data = JSON.parse(data);
-  //    // console.log("data loaded");
+  $.ajax({
+    type: 'GET',
+    dataType: "text",
+    url: '/database_read',
+    success: function (data) {
+      data = JSON.parse(data);
+      console.log("data loaded");
 
-  //     var months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-  //     var monthId = 2;
-  //     var currentMonth = months[monthId];
-  //     let calendar = $(document.createElement("table"));
-  //     calendar.attr('id', 'calendar');
-  //     calendar.addClass('calendar');
+      let bookedData = $("<p id='bookedData'>Schedule for the next 7 days</p>");
+      bookedData.addClass('bookedData');
 
-  //     calendar.append($("<div id='month'>" + currentMonth + "</div>"));
-  //     calendar.append($("<button id='prevButton'" + "Previous" + "</button>"));
-  //     calendar.append($("<button id='nextButton'" + "Next" + "</button>"));
+      // for (let i = 0; i < 7; i++){
+        
+      // }
+      if ($(document).find($('#booking'))){1
+        bookedData.insertAfter($('#booking'));
+      }
+    }
+  });
+  
 
-  //     calendar.append($("<tr> <th class='days'>SUN</th> <th class='days'>MON</th> <th class='days'>TUE</th> <th class='days'>WED</th> <th class='days'>THU</th> <th class='days'>FRI</th> <th class='days'>SAT</th></tr>"));
-  //     calendar.append($("<tr> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td></tr>"));
-  //     calendar.append($("<tr> <td>8</td> <td>9</td> <td>10</td> <td>11</td> <td>12</td> <td>13</td> <td>14</td></tr>"));
-  //     calendar.append($("<tr> <td>15</td> <td>16</td> <td>17</td> <td>18</td> <td>19</td> <td>20</td> <td>21</td></tr>"));
-  //     calendar.append($("<tr> <td>2</td> <td>23</td> <td>24</td> <td>25</td> <td>26</td> <td>27</td> <td>28</td></tr>"));
-  //     calendar.append($("<tr> <td>29</td> <td>30</td> <td>31</td>"));
-      
-  //     // calendar.appennd($('#booking'));
-  //     // $('#booking').appendTo(calendar)
-  //     calendar.insertAfter($('#booking'));
 
   //     // update to the next month
   //     $('#prevButton').on("click", function(){
