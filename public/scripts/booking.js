@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     let newForm = $(document.createElement("div"));
     newForm.attr('id', 'newForm');
-    newForm.addClass('boxBooking');
+    newForm.addClass('boxBooking2');
     newForm.append($("<p> Style: " + event.target.id + "</p>"));
 
     newForm.append($("<form>" + "FIRST NAME: " + "<input type='text' id='firstNameField' name='FirstName'>"));

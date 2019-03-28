@@ -110,8 +110,19 @@ body, html {
   background-color:#ffc4b2;
   font-size:36px;
   overflow: hidden;
-  text-align: left;
+  text-align: center;
   padding-left: 10%;
+  /* padding-right: 10%; */
+ }
+
+ .boxBooking2{
+  height:500px;
+  background-color:#ffc4b2;
+  font-size:36px;
+  overflow: hidden;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
  }
 
  .calendar{
@@ -140,15 +151,17 @@ body, html {
   overflow: hidden;
   text-align: center;
   padding-left: 10%;
+  padding-right: 10%;
  }
 
 .bookedData{
   background-color: #ffc4b2;
   margin: 0;
   padding-right: 10%;
+  padding-left: 10%;
   font-size: 200%;
   overflow:hidden;
-  text-align:right
+  text-align:center;
 }
 .caption {
   text-align: left;
