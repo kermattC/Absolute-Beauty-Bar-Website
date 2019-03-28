@@ -60,21 +60,9 @@ function submitForm() {
   let firstName = document.getElementById('firstNameField').value;
   let lastName = document.getElementById('lastNameField').value;
   let date = document.getElementById('dateSelect').value;
-  console.log("Form date: " + date);
   let style = $(document).find("img.selected").attr("id");
   let booked = false
   let currentDate = ""
-  // console.log("First name: " + firstName);
-  // console.log("Last Name: " + lastName);
-  // console.log("Date: " + date);
-  // console.log("Style: " + style);
-
-  
-  // Attempt: Prevent user from entering empty fields
-  // if (firstName == "" || lastName == ""){
-  //   $('.BOOKME').append("<p> Please enter a valid name</p>");
-  // }
-  
   
   // check that the day is not already booked
   $.ajax({
@@ -89,13 +77,13 @@ function submitForm() {
       let years = [];
       
       for (let i = 0; i < data.length; i++){
-        console.log(data[i].Date.substring(0,4))
+        // console.log(data[i].Date.substring(0,4))
         years[i] = data[i].Date.substring(0,4)
         months[i] = data[i].Date.substring(5,7)
         dates[i] = data[i].Date.substring(8,10)
         currentDate = years[i]+"-"+months[i]+"-"+dates[i]
-        console.log("system date: " + currentDate);
-        console.log("user date: " + date)
+        // console.log("system date: " + currentDate);
+        // console.log("user date: " + date)
         if (date == currentDate){
           console.log("Day already booked")
           booked = true;
@@ -131,10 +119,11 @@ function submitForm() {
   });
 }
 function displayData() {
-  
-  // if ($(document.getElementById('dateSelect'))== null){
-  //   console.log('no date');
-  // }
+  if ($(document).find('#bookedData')){
+    $('#bookedData').remove();
+  }
+  let currentDate = '';
+
   $.ajax({
     type: 'GET',
     dataType: "text",
@@ -142,9 +131,13 @@ function displayData() {
     success: function (data) {
       data = JSON.parse(data);
       console.log("data loaded");
+      let currentDate = ''
 
-      // let test = $(document.getElementById('dateSelect'));
+      for (var i= 0; i < data.length; i++){
+        currentDate[i] = data[i].Date;
+      }
       let test = document.getElementById('dateSelect');
+      // for some reason it only worked with extra if statements
       if (test){
         if ((test.value != undefined)){
           console.log('has date');
@@ -152,11 +145,62 @@ function displayData() {
           bookedData.addClass('bookedData');
           if (test.value == ''){
             bookedData.append("<p>Enter in a date to see the availabilities</p>");
-            console.log('EMPTY');
           }else{
-            bookedData.append("<p>"+test.value+": booked</p>");
-          }
+            var date = test.value.substring(8,10)
+            var month = test.value.substring(5,7)
+            var year = test.value.substring(0,4)
+            
+            for (var i=1; i<8; i++){        
+              var max = 0
+              max = parseInt(max, 10)
+              date = parseInt(date, 10)
+              month = parseInt(month, 10)
+              year = parseInt(year, 10)
+
+              // set the max amount of days according to each month
+              if (month % 2 == 0){
+                max = 30;
+              }else if (month %2 != 0){
+                max = 31;
+              }
+              
+
+              // check if it is the next month/year
+              if ((date +1) > max){
+                date = 0  
+                if ((month +1 ) > 12){
+                  month = 1
+                  year += 1
+                }else{
+                  month += 1
+                }
+              }
+              date += 1
           
+              var userDay = year+'-'+month+'-'+date  
+            
+              // check database if date is already booked
+              for (let j = 0; j < data.length; j++){
+                var dbDate = parseInt(data[j].Date.substring(8,10))
+                var dbMonth = parseInt(data[j].Date.substring(5,7))
+                var dbYear = parseInt(data[j].Date.substring(0,4))
+                // console.log(data[i].Date.substring(0,4))
+                 currentDate = dbYear+'-'+dbMonth+'-'+dbDate
+                 console.log("User date: " + userDay + " Database date: " + currentDate)
+                if (userDay == currentDate){
+                  booked = true;
+                  break;
+                }else{
+                  booked = false;
+                }
+              }
+              if (booked){
+                bookedData.append("<p>"+userDay+": booked</p>");
+              }else{
+                bookedData.append("<p>"+userDay+": available</p>");
+              }
+            }
+          }
           if ($(document).find($('#booking'))){
             bookedData.insertAfter($('#booking'));
           }
@@ -165,43 +209,7 @@ function displayData() {
           console.log('no date');
         }
       }
-
-      for (let i = 0; i < 7; i++){
-        console.log('ayy lmao');
-        // bookedData.append($("<p>"))
-        // newForm.append($("<form>" + "FIRST NAME: " + "<input type='text' id='firstNameField' name='FirstName'>"));
-      }
-
-
-      
     }
   });
-  
-
-
-  //     // update to the next month
-  //     $('#prevButton').on("click", function(){
-  //       monthId -= 1;
-  //       if (monthId == 0){
-  //         monthId = 12;
-  //       }
-  //       document.getElementById('month').innerHTML = months[monthId]
-  //     });
-
-  //     $('#nextButton').on("click", function(){
-  //       monthId += 1;
-  //       if (monthId == 13){
-  //         monthId = 1;
-  //       }
-  //       document.getElementById('month').innerHTML = months[monthId]
-  //     });
-
-  //     // for (let i = 0; i < data.length; i++){
-  //     //   // console.log(data[i].Date);
-  //     //   // console.log(data[i].Date.substring(5,7))  // month
-  //     //   // console.log(data[i].Date.substring(8,10)) // date
-  //     // }
-  //   }
-  // });
 }
 
