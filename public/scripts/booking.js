@@ -143,13 +143,20 @@ function displayData() {
       data = JSON.parse(data);
       console.log("data loaded");
 
-      let test = $(document.getElementById('dateSelect'));
+      // let test = $(document.getElementById('dateSelect'));
+      let test = document.getElementById('dateSelect');
       if (test){
-        if (test.val() != null){
+        if ((test.value != undefined)){
           console.log('has date');
-          let bookedData = $("<p id='bookedData'>Schedule for the next 7 days</p>");
+          let bookedData = $("<p id='bookedData'>Schedule for the next 7 days:</p>");
           bookedData.addClass('bookedData');
-          bookedData.append("<p>"+test.val()+": booked</p>");
+          if (test.value == ''){
+            bookedData.append("<p>Enter in a date to see the availabilities</p>");
+            console.log('EMPTY');
+          }else{
+            bookedData.append("<p>"+test.value+": booked</p>");
+          }
+          
           if ($(document).find($('#booking'))){
             bookedData.insertAfter($('#booking'));
           }
