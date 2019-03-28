@@ -1,5 +1,6 @@
 $(document).ready(function () {
   
+  // dynamically add pictures for the user to select their desired style
   $(".BOOKME").append("<p>SELECT A STYLE</p>");
   $(".BOOKME").append("<table align='center' class='tableBook' id='TABLE'>");
   $("#TABLE").append("<tr><td>" + "<img id='Cat' src='../images/Cat.jpg' " + "</td>" +
@@ -10,6 +11,7 @@ $(document).ready(function () {
   $(".BOOKME").addClass("BOOKME2");
   $("#TABLE").addClass("tableBook")
 
+  // dynamic html that adds a black border to the selected image, only allowing one to appear at a time
   $('img').click(function (event) {
     displayData();
     deselectAll();
@@ -25,6 +27,7 @@ $(document).ready(function () {
     var element = document.getElementById(event.target.id);
     element.classList.toggle("selected");
 
+    // dynamically add a new form for the user to enter their information
     let newForm = $(document.createElement("div"));
     newForm.attr('id', 'newForm');
     newForm.addClass('boxBooking2');
@@ -35,11 +38,10 @@ $(document).ready(function () {
     newForm.append($("<br/>" + "DATE: " + "<input id='dateSelect' type='date' name='date'>"));
     newForm.append($("<br/>" + "<button type='submit'  onclick='submitForm()' >" + "Submit" + "</button>"));
     newForm.insertAfter($('#booking'));
-
-    ;
     newForm[0].scrollIntoView();
   });
 
+  // remove any black borders from the image. used for the user selection of images
   function deselectAll() {
     let selected = document.getElementsByTagName('img');
     for (let i = 0; i < selected.length; i++) {
@@ -49,6 +51,9 @@ $(document).ready(function () {
 
 });
 
+// adds the user information into the database. This does a check to find any times that have 
+// already been booked. If the day has already been booked then reject the user's input and 
+// notify them to select another day
 function submitForm() {
   displayData();
   if ($(document).find('#bookedData')){
@@ -57,6 +62,7 @@ function submitForm() {
   if ($(document).find($('#notice'))){
     $('#notice').remove();
   }
+  // store user inputs into variables
   let firstName = document.getElementById('firstNameField').value;
   let lastName = document.getElementById('lastNameField').value;
   let date = document.getElementById('dateSelect').value;
@@ -71,19 +77,9 @@ function submitForm() {
     url: '/database_read',
     success: function (data) {
       data = JSON.parse(data);
-    
-      let dates = [];
-      let months = [];
-      let years = [];
       
       for (let i = 0; i < data.length; i++){
-        // console.log(data[i].Date.substring(0,4))
-        years[i] = data[i].Date.substring(0,4)
-        months[i] = data[i].Date.substring(5,7)
-        dates[i] = data[i].Date.substring(8,10)
-        currentDate = years[i]+"-"+months[i]+"-"+dates[i]
-        // console.log("system date: " + currentDate);
-        // console.log("user date: " + date)
+        currentDate = data[i].Date;
         if (date == currentDate){
           console.log("Day already booked")
           booked = true;
@@ -122,12 +118,13 @@ function submitForm() {
     }
   });
 }
+
+// displays the availability of the next 7 days when the date the user selected has already been booked
 function displayData() {
   if ($(document).find('#bookedData')){
     $('#bookedData').remove();
   }
-  let currentDate = '';
-
+  // read the database so it can compare to the day the user entered to the days that already have been booked
   $.ajax({
     type: 'GET',
     dataType: "text",
@@ -140,6 +137,7 @@ function displayData() {
       for (var i= 0; i < data.length; i++){
         currentDate[i] = data[i].Date;
       }
+      // check that a date has actually been entered first
       let test = document.getElementById('dateSelect');
       // for some reason it only worked with extra if statements
       if (test){
@@ -154,6 +152,7 @@ function displayData() {
             var month = test.value.substring(5,7)
             var year = test.value.substring(0,4)
             
+            // add one value to the date the user entered. Month and year changes accordingly
             for (var i=1; i<8; i++){        
               var max = 0
               max = parseInt(max, 10)
@@ -188,7 +187,6 @@ function displayData() {
                 var dbDate = parseInt(data[j].Date.substring(8,10))
                 var dbMonth = parseInt(data[j].Date.substring(5,7))
                 var dbYear = parseInt(data[j].Date.substring(0,4))
-                // console.log(data[i].Date.substring(0,4))
                  currentDate = dbYear+'-'+dbMonth+'-'+dbDate
                  console.log("User date: " + userDay + " Database date: " + currentDate)
                 if (userDay == currentDate){
@@ -198,6 +196,7 @@ function displayData() {
                   booked = false;
                 }
               }
+              // dynamically add the availability schedule. phew
               if (booked){
                 bookedData.append("<p>"+userDay+": booked</p>");
               }else{
@@ -205,12 +204,12 @@ function displayData() {
               }
             }
           }
+          // append all 7 days to the page
           if ($(document).find($('#booking'))){
             bookedData.insertAfter($('#booking'));
           }
-
         }else{
-          console.log('no date');
+          console.log('no date entered');
         }
       }
     }

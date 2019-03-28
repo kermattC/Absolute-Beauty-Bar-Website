@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require("body-parser");
+// needed for updating the database
 var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb://localhost:27017/";
 var app = express();
@@ -13,14 +14,12 @@ app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
 
-app.get('/login', function(request, response){
-  response.sendFile('login.html', {root: __dirname + '/public'});
-});
-
+// default web page
 app.get('/', (req, response) => {
   response.sendFile('main.html', { root: __dirname + '/public' });
 });
 
+// sends booking webpage to client
 app.get('/booking', (req, response) => {
   response.sendFile('booking.html', { root: __dirname + '/public' });
 });
@@ -59,6 +58,7 @@ app.post('/database_update', (req, response) => {
   });
 });
 
+// start the web page at port #3000
 app.listen(3000, function () {
   console.log("Listening...");
 });
