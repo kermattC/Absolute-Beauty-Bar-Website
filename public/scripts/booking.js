@@ -103,12 +103,16 @@ function submitForm() {
           type: "POST"
         });
         let notice = $("<p id='notice'>YOUR APPOINTMENT HAS BEEN BOOKED! SEE YOU SOON!</p>");
+        if ($(document).find('#bookedData')){
+          $('#bookedData').remove();
+        }
         notice.addClass('notice');
         if ($(document).find($('#booking'))) {
           notice.insertAfter($('#booking'))
         }
       }else{
         console.log("booking unsuccessful");
+        
         let notice = $("<p id='notice'>SORRY, THIS DAY HAS BEEN BOOKED. PLEASE CHOOSE ANOTHER DAY</p>");
         notice.addClass('notice');
         if ($(document).find($('#booking'))) {
