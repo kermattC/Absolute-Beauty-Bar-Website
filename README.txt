@@ -3,7 +3,6 @@ Group Members:
       Matthew Chan - 100622178
 
 Start database:
-
       - Open terminal. Type in:			mongod
       - Open another terminal. Type in:		mongo
 
@@ -19,7 +18,6 @@ Database:
 
 View database as a JSON:
       - localhost:3000/database_read
-
 
 Export database:
       - mongoexport --db bookings --collection bookingInfo --out public/data/bookings.json	
